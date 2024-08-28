@@ -1,0 +1,52 @@
+name: "&6Skill Party"
+size: 27
+
+items:
+  filler:
+    type: GRAY_STAINED_GLASS_PANE
+    name: ' '
+
+  26:
+    type: BARRIER
+    name: '&cClose Menu'
+    action: CLOSE
+
+  18:
+    type: LIME_STAINED_GLASS_PANE
+    name: '&cCreate Party'
+    action: PARTY_CREATE
+
+  19:
+    type: RED_STAINED_GLASS_PANE
+    name: '&cLeave Party'
+    action: PARTY_LEAVE
+
+  9-26:
+    type: BLACK_STAINED_GLASS_PANE
+    name: ' '
+
+  23:
+    type: PLAYER_HEAD
+    name: '&f&lParty Information'
+    lore:
+      - '&7Parties are used to chat and share'
+      - '&7points with your friends.'
+      - ''
+      - ' &7- &bParty Members: &2%party_members%'
+      - ' &7- &eMy Mana: &6%mana%✨'
+
+settings:
+  partyMemberSlots: 10,11,12,13,14,15,16
+  skill:
+    name: "&b&l%skill% Skill"
+    lore:
+      - '&7%description%'
+      - ''
+      - ' &7- &fCurrent Level: &f&l%level%'
+      - ' &7- &bPoints: &3%points%&7/&3%points_next_level%'
+      - ' '
+      - ' &7- &aSkill Talents:'
+      - '%talents_new_line%' # To list talents in same line, use %talents% placeholder
+      - ''
+      - '&7 - &dMultiplier: &5x%multiplier% &7(%class%)'
+    action: OPEN_PROGRESS_MENU

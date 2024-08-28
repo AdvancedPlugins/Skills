@@ -1,0 +1,14 @@
+# Lumberjack talent
+name: "Lumberjack"
+description: "Chance to get more drops from trees"
+icon:
+  type: OAK_SAPLING
+mana: 3
+
+abilities:
+  MINING:
+    conditions:
+      - '%item type% contains AXE : %allow%'
+      - '%block type% contains LOG : %allow%'
+    effects:
+      - MORE_DROPS:2

@@ -1,0 +1,49 @@
+name: Mining
+description: "Mastery of mining"
+
+# Icon show in menu
+icon:
+  type: DIAMOND_PICKAXE
+
+# Point leveling curve
+point-levels: "50 * (%level% * 1.25)"
+
+# Max level, set to 0 for unlimited
+max-level: 0
+
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - digger:1 #3x3 break
+  - super_miner:3 #Chance to break blocks faster
+  - double_drops:5 #Chance to get double drops
+
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 3 + (%level% * 0.01)
+  # Amount of mana
+  amount: 1
+
+# Points are gained from triggers. Priority is from top to bottom, so if you want to e.g. gain more skills from ores than just blocks,
+# you'd use condition to check for ores first, then with next gain just give points for basic blocks. If first skill activates, second wont.
+point-triggers:
+  1:
+    # Points given for this trigger
+    points: 2
+    MINING: # This will activate for any block that contains DIAMOND_ORE
+      conditions:
+        - '%ore types% contains %block type% : %allow%'
+      effects:
+        - 'ADVANCEDSKILLS_DROP_MANA:1 <chance>15</chance>' # More Mana when breaking ores
+  2:
+    # Points given for this trigger
+    points: 1
+    MINING: # This will activate for any other block
+      conditions:
+        - '%block type% contains STONE|DEEPSLATE : %allow%'
+

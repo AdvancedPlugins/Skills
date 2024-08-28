@@ -1,0 +1,55 @@
+name: "{#f54ea8}Your Skills"
+size: 45
+
+items:
+  filler:
+    type: GRAY_STAINED_GLASS_PANE
+    name: ' '
+
+  44:
+    type: BARRIER
+    name: '&cClose Menu'
+    action: CLOSE
+
+  9-26:
+    type: BLACK_STAINED_GLASS_PANE
+    name: ' '
+
+  40:
+    type: PLAYER_HEAD
+    name: '&f&lMy Information'
+    lore:
+      - '&7Skills are abilities you can gain points and'
+      - '&7level up by performing skilled actions.'
+      - ''
+      - '&7By being higher level in a skill, you will'
+      - '&7gain more mana and unlock new talents.'
+      - ''
+      - ' &7- &eMy Mana: &6%mana%✨'
+
+  36:
+    type: NETHER_STAR
+    name: '&6Talents Menu'
+    action: OPEN_TALENT_MENU
+
+  37:
+    type: NETHERITE_CHESTPLATE
+    name: '&eClasses Menu'
+    action: OPEN_CLASSES_MENU
+
+settings:
+  skillSlots: 10,11,12,13,14,15,16,19,20,21,22,23,24,25,28,29,30,31,32,33,34
+  talentLineFormat: '     &2%talent_name% &7(Lvl. %talent_level%)'
+  skill:
+    name: "&b&l%skill% Skill"
+    lore:
+      - '&7%description%'
+      - ''
+      - ' &7- &fCurrent Level: &f&l%level%'
+      - ' &7- &bPoints: &3%points%&7/&3%points_next_level%'
+      - ' '
+      - ' &7- &aSkill Talents:'
+      - '%talents_new_line%' # To list talents in same line, use %talents% placeholder
+      - ''
+      - '&7 - &dMultiplier: &5x%multiplier% &7(%class%)'
+    action: OPEN_PROGRESS_MENU

@@ -1,0 +1,16 @@
+# Double Drops Talent
+name: "Double Drops"
+description: "Chance to gain double drops"
+icon:
+  type: GOLDEN_PICKAXE
+
+mana: 2
+
+abilities:
+  MINING:
+    chance: 25
+    cooldown: 8
+    conditions:
+      - '%block type% contains _ORE : %allow%'
+    effects:
+      - MORE_DROPS:2

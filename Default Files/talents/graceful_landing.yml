@@ -1,0 +1,15 @@
+# Graceful Landing talent
+name: "Graceful Landing"
+description: "Reduce fall damage by up to 50%, cooldown 15s"
+icon:
+  type: LEATHER_BOOTS
+
+mana: 5
+
+abilities:
+  FALL_DAMAGE:
+    cooldown: 15
+    effects:
+      - DECREASE_DAMAGE:<random number>15-50</random>
+      - PARTICLE:BLOCK_DUST:30:0.3
+      - PLAY_SOUND:BLOCK_GRASS_STEP:1:0.8

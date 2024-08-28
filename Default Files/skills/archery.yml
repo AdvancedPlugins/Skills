@@ -1,0 +1,51 @@
+name: Archery
+description: "Master of ranged combat"
+# Icon shown in menu
+icon:
+  type: BOW
+# Point leveling curve
+point-levels: "60 * (%level% * 1.35)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - piercing:1 #Chance for arrows to pierce through targets
+  - arrow_rain:3 #Chance to rain arrows upon your enemies
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 5 + (%level% * 0.05)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    points: 1
+    SHOOT:
+      conditions:
+        - '%is headshot% = true : %allow%'
+        - '%attacker item type% = BOW : %allow%'
+  2:
+    # Bonus points for mob headshot
+    points: 1
+    SHOOT_MOB:
+      conditions:
+        - '%is headshot% = true : %allow%'
+        - '%attacker item type% = BOW : %allow%'
+  3:
+    # Points for killing a mob
+    points: 2
+    KILL_MOB:
+      conditions:
+        - '%attacker item type% = BOW : %allow%'
+  4:
+    # Points for killing a player
+    points: 3
+    KILL_PLAYER:
+      conditions:
+        - '%attacker item type% = BOW : %allow%'

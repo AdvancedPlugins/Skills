@@ -1,0 +1,25 @@
+# Precise Shot talent
+name: "Arrow Rain"
+description: "Chance to rain arrows upon your enemies, cooldown 8s"
+icon:
+  type: ARROW
+
+mana: 4
+
+abilities:
+  SHOOT:
+    cooldown: 8
+    conditions:
+      - '%item type% contains BOW : %allow%'
+    effects:
+      - SPAWN_ARROWS @Victim
+      - PARTICLE:CRIT:15:0.3 @Victim
+      - PLAY_SOUND:ENTITY_ARROW_HIT_PLAYER:1:1.5 @Attacker
+  SHOOT_MOB:
+    cooldown: 8
+    conditions:
+      - '%item type% contains BOW : %allow%'
+    effects:
+      - SPAWN_ARROWS @Victim
+      - PARTICLE:CRIT:15:0.3 @Victim
+      - PLAY_SOUND:ENTITY_ARROW_HIT_PLAYER:1:1.5 @Attacker

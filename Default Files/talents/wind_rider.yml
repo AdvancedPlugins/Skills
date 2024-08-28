@@ -1,0 +1,16 @@
+# Wind Rider talent
+name: "Wind Rider"
+description: "30% chance to gain a speed boost when starting to glide"
+icon:
+  type: FEATHER
+
+mana: 5
+
+abilities:
+  ELYTRA_FLY:
+    cooldown: 20 # seconds
+    chance: 30
+    effects:
+      - POTION:SPEED:2:100
+      - PARTICLE:CLOUD:20:0.5
+      - PLAY_SOUND:ENTITY_FIREWORK_ROCKET_LAUNCH:1:1

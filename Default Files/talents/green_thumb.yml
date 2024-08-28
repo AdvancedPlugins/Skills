@@ -1,0 +1,18 @@
+# Bloom talent
+name: "Green Thumb"
+description: "Chance to multiply crop harvests"
+icon:
+  type: WHEAT
+
+mana: 1
+
+abilities:
+  MINING:
+    cooldown: 5
+    chance: 30
+    conditions:
+      - '%block type% contains WHEAT|CARROTS|POTATOES|BEETROOTS|MELON|PUMPKIN : %allow%'
+    effects:
+      - MORE_DROPS:2
+      - PARTICLE:VILLAGER_HAPPY:15:0.5
+      - PLAY_SOUND:BLOCK_GRASS_BREAK:1:1

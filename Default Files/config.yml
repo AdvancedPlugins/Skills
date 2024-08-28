@@ -1,0 +1,57 @@
+# AdvancedSkills
+# Version: 1.0.7
+# Release date: 26/08/2024
+
+lang: en
+
+point-gain:
+  # Percentages at which point gain is shown to player. Set to 0 to show at every point gain.
+  # This controls the 'messages.skills.gained-points' message from en.yml
+  announcement-percentages: 5, 10, 25, 50, 75, 95, 98
+  # Some skills may need to announce points every time (e.g. acrobatics)
+  announce-every-point:
+    - acrobatics
+  # Should player be informed when they are starting a new skill?
+  # This controls the 'messages.skills.learning-new' message from lang file
+  inform-learning: true
+
+# Level up effects
+# Message can be edited in language file, see lang/en.yml "messages.skills.level-up"
+# Effects are listed here: https://wiki.advancedplugins.net/abilities/effects
+level-up:
+  effects:
+    - 'PARTICLE:FIREWORK:30:1 @Add{y=1}'
+    - 'PLAY_SOUND:LEVEL_UP'
+
+talents:
+  # Should talents selection menu open with shift + F key?
+  open-with-shift-f: true
+  # Max talents active at once
+  max-active: 3
+
+# Player Data Storage Configuration
+storage:
+  # Choose between 'file' or 'mysql'
+  # Currently only FILE is available, mysql is coming soon.
+  type: file
+
+  # MySQL Configuration (only used if type is set to 'mysql')
+  mysql:
+    enabled: false
+    host: localhost
+    port: 3306
+    database: your_database_name
+    username: your_username
+    password: your_password
+
+  # File Storage Configuration (only used if type is set to 'file')
+  file:
+    # Optional: Specify a custom directory for player data files
+    # If not specified, it will use the default 'userData' folder in your plugin's data folder
+    directory: "playerData"
+
+# Optional: Configure auto-save interval (in minutes)
+auto-save:
+  enabled: true
+  interval: 15
+

@@ -1,0 +1,19 @@
+# Potent Brew talent
+name: "Potent Brew"
+description: "Chance to gain positive potion effects when consumed, cooldown 30s"
+icon:
+  type: GLOWSTONE_DUST
+
+mana: 10
+
+abilities:
+  EAT:
+    cooldown: 30
+    conditions:
+      - '%food type% contains POTION : %allow%'
+    effects:
+      - POTION:STRENGTH:1:300
+      - POTION:HASTE:1:300
+      - POTION:SPEED:1:300
+      - PARTICLE:SPELL_MOB:20:0.5
+      - PLAY_SOUND:ENTITY_WITCH_DRINK:1:1

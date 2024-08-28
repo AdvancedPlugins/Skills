@@ -1,0 +1,76 @@
+name: Tridents
+description: "Master of the ocean's mightiest weapon"
+# Icon shown in menu
+icon:
+  type: TRIDENT
+# Point leveling curve
+point-levels: "110 * (%level% * 1.35)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - thunderbolt:1 #Chance to strike lightning when hitting with a thrown trident
+  - impaler:3 #Chance to deal extreme damage with melee trident hit
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 10 + (%level% * 0.06)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for hitting an entity with a thrown trident
+    points: 8
+    SHOOT:
+      conditions:
+        - '%item type% contains TRIDENT : %allow%'
+  2:
+    # Bonus points for headshot with thrown trident
+    points: 12
+    SHOOT:
+      conditions:
+        - '%item type% contains TRIDENT : %allow%'
+        - '%is headshot% = true : %allow%'
+  3:
+    # Points for hitting a mob with a thrown trident
+    points: 6
+    SHOOT_MOB:
+      conditions:
+        - '%item type% contains TRIDENT : %allow%'
+  4:
+    # Bonus points for mob headshot with thrown trident
+    points: 10
+    SHOOT_MOB:
+      conditions:
+        - '%item type% contains TRIDENT : %allow%'
+        - '%is headshot% = true : %allow%'
+  5:
+    # Points for melee attack with trident
+    points: 4
+    ATTACK:
+      conditions:
+        - '%attacker item type% contains TRIDENT : %allow%'
+  6:
+    # Points for melee attack on mob with trident
+    points: 3
+    ATTACK_MOB:
+      conditions:
+        - '%attacker item type% contains TRIDENT : %allow%'
+  7:
+    # Bonus points for killing a player with trident
+    points: 15
+    KILL:
+      conditions:
+        - '%attacker item type% contains TRIDENT : %allow%'
+  8:
+    # Bonus points for killing a mob with trident
+    points: 8
+    KILL_MOB:
+      conditions:
+        - '%attacker item type% contains TRIDENT : %allow%'

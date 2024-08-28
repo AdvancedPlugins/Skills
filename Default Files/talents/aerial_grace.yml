@@ -1,0 +1,16 @@
+# Aerial Grace talent
+name: "Aerial Grace"
+description: "Chance to negate fall damage after gliding"
+icon:
+  type: ELYTRA
+
+mana: 7
+
+abilities:
+  ELYTRA_FLY:
+    cooldown: 15
+    chance: 10
+    effects:
+      - POTION:SLOW_FALLING:1:200
+      - PARTICLE:END_ROD:15:0.3
+      - PLAY_SOUND:ENTITY_PHANTOM_FLAP:1:0.8

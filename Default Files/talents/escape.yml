@@ -1,0 +1,13 @@
+# Roll talent
+name: "Escape"
+description: "Gain Speed after taking taking fall damage"
+icon:
+  type: FEATHER
+
+mana: 1
+
+abilities:
+  FALL_DAMAGE:
+    cooldown: 10
+    effects:
+      - POTION:SPEED:3:60

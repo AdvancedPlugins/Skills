@@ -1,0 +1,69 @@
+name: Herbalism
+description: "Master of plants and agriculture"
+# Icon shown in menu
+icon:
+  type: WHEAT
+# Point leveling curve
+point-levels: "120 * (%level% * 1.25)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - green_thumb:1 #Chance to multiply crop harvests
+  - bounty:3 #Chance to multiply plant drops
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 4 + (%level% * 0.06)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for harvesting fully grown crops
+    points: 5
+    MINING:
+      conditions:
+        - '%block type% contains WHEAT|CARROTS|POTATOES|BEETROOTS|NETHER_WART : %allow%'
+        - '%is fully grown% = true : %allow%'
+  2:
+    # Points for harvesting pumpkins and melons
+    points: 4
+    MINING:
+      conditions:
+        - '%block type% contains PUMPKIN|MELON : %allow%'
+  3:
+    # Points for harvesting sugar cane and bamboo
+    points: 2
+    MINING:
+      conditions:
+        - '%block type% contains SUGAR_CANE|BAMBOO : %allow%'
+  4:
+    # Points for harvesting flowers
+    points: 3
+    MINING:
+      conditions:
+        - '%block type% contains DANDELION|POPPY|BLUE_ORCHID|ALLIUM|AZURE_BLUET|RED_TULIP|ORANGE_TULIP|WHITE_TULIP|PINK_TULIP|OXEYE_DAISY|CORNFLOWER|LILY_OF_THE_VALLEY|SUNFLOWER|LILAC|ROSE_BUSH|PEONY : %allow%'
+  5:
+    # Points for harvesting mushrooms
+    points: 4
+    MINING:
+      conditions:
+        - '%block type% contains BROWN_MUSHROOM|RED_MUSHROOM|MUSHROOM_STEM|BROWN_MUSHROOM_BLOCK|RED_MUSHROOM_BLOCK : %allow%'
+  6:
+    # Points for harvesting leaves
+    points: 1
+    MINING:
+      conditions:
+        - '%block type% contains OAK_LEAVES|SPRUCE_LEAVES|BIRCH_LEAVES|JUNGLE_LEAVES|ACACIA_LEAVES|DARK_OAK_LEAVES : %allow%'
+  7:
+    # Points for harvesting saplings
+    points: 2
+    MINING:
+      conditions:
+        - '%block type% contains OAK_SAPLING|SPRUCE_SAPLING|BIRCH_SAPLING|JUNGLE_SAPLING|ACACIA_SAPLING|DARK_OAK_SAPLING : %allow%'

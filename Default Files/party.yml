@@ -1,0 +1,29 @@
+# Is the party system enabled?
+enabled: true
+
+settings:
+  chat: true
+  points-share: true
+
+unlock:
+  chat: 1
+  point-share: 5
+
+point-share:
+  radius: 75 # How many blocks in radius to share points
+  # Depending on member count, how much percentage of points is shared between then
+  # E.g. if 2 members are within 75 block radius of player who gained exp, those players will get 15% of the points gained
+  near-members:
+    1: 10
+    2: 15
+    3: 20
+    9: 45
+    10: 50
+
+# Level to unlock for party
+levels:
+  1: 100
+  2: 200
+  3: 800
+  4: 1200
+  5: 1400

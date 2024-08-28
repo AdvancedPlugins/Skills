@@ -1,0 +1,25 @@
+name: "&d&lClasses Menu"
+size: 9
+
+items:
+  filler:
+    type: GRAY_STAINED_GLASS_PANE
+    name: ' '
+  8:
+    type: CALIBRATED_SCULK_SENSOR
+    name: '&dSkills Menu'
+    action: OPEN_SKILLS_MENU
+
+settings:
+  classSlots: 2,3,4,5,6
+  # Format of skills. %k% being skill name, %v% being multiplier
+  format: "&7- &f%k% &bx%v%\n"
+  class:
+    name: "&b%class% Class"
+    lore:
+      - '&7%description%'
+      - ''
+      - '&bSkill Boosts:'
+      - '%skill_boosts%'
+      - ''
+      - '&dClick to select this class'

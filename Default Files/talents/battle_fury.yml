@@ -1,0 +1,18 @@
+# Battle Fury talent
+name: "Battle Fury"
+description: "25% chance to gain Strength II after killing a player"
+icon:
+  type: BLAZE_POWDER
+
+mana: 9
+
+abilities:
+  KILL_PLAYER:
+    cooldown: 45 # seconds
+    chance: 25
+    conditions:
+      - '%attacker item type% contains _SWORD : %allow%'
+    effects:
+      - POTION:INCREASE_DAMAGE:2:200
+      - PARTICLE:FLAME:20:0.5
+      - PLAY_SOUND:ENTITY_ENDER_DRAGON_GROWL:1:1

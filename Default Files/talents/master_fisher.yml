@@ -1,0 +1,16 @@
+name: "Master Fisher"
+description: "Chance to catch fish faster"
+icon:
+  type: FISHING_ROD
+
+mana: 7
+
+abilities:
+  ROD_CAST:
+    cooldown: 45 # seconds
+    chance: 20
+    effects:
+      - SET_MIN_CATCH_TIME:100
+      - SET_MAX_CATCH_TIME:200
+      - PARTICLE:BUBBLE:15:0.3
+      - PLAY_SOUND:ENTITY_FISHING_BOBBER_THROW:1:1

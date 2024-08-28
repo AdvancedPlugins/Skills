@@ -1,0 +1,16 @@
+# Abundance talent
+name: "Abundance"
+description: "Chance to multiply fishing drops"
+icon:
+  type: COD
+
+mana: 5
+
+abilities:
+  CATCH_FISH:
+    cooldown: 30
+    chance: 25
+    effects:
+      - MORE_DROPS:2
+      - PARTICLE:WATER_SPLASH:20:0.5
+      - PLAY_SOUND:ENTITY_FISHING_BOBBER_SPLASH:1:1

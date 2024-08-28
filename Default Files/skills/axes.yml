@@ -1,0 +1,50 @@
+name: Axes
+description: "Master of axe combat"
+# Icon shown in menu
+icon:
+  type: DIAMOND_AXE
+# Point leveling curve (adjusted for dual-purpose skill)
+point-levels: "65 * (%level% * 1.4)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - cleaving_strike:3
+  - executioner:5
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable (adjusted for dual-purpose skill)
+  chance: 12 + (%level% * 0.06)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for attacking a player with an axe
+    points: 1
+    ATTACK:
+      conditions:
+        - '%attacker item type% contains _AXE : %allow%'
+  2:
+    # Points for attacking a mob with an axe
+    points: 1
+    ATTACK_MOB:
+      conditions:
+        - '%attacker item type% contains _AXE : %allow%'
+  3:
+    # Points for killing a player with an axe
+    points: 2
+    KILL:
+      conditions:
+        - '%attacker item type% contains _AXE : %allow%'
+  4:
+    # Points for killing a mob with an axe
+    points: 3
+    KILL_MOB:
+      conditions:
+        - '%attacker item type% contains _AXE : %allow%'

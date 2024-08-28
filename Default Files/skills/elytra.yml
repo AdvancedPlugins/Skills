@@ -1,0 +1,43 @@
+name: Elytra
+description: "Master of aerial navigation and flight"
+icon:
+  type: ELYTRA
+point-levels: "80 * (%level% * 1.4)"
+max-level: 0
+talents:
+  - wind_rider:1 #Chance to gain a brief speed boost when starting to glide
+  - aerial_grace:2 #Chance to negate fall damage after gliding
+mana:
+  drop: POINT
+  chance: 10 + (%level% * 0.06)
+  amount: 1
+point-triggers:
+  1:
+    # Bonus points for starting a glide in the End dimension
+    points: 15
+    ELYTRA_FLY:
+      conditions:
+        - '%world% contains end : %allow%'
+  2:
+    # Bonus points for starting a glide from a very high altitude
+    points: 12
+    ELYTRA_FLY:
+      conditions:
+        - '%player y% > 200 : %allow%'
+  3:
+    # Bonus points for starting a glide during rain or thunderstorm
+    points: 10
+    ELYTRA_FLY:
+      conditions:
+        - '%weather% contains rain : %allow%'
+  4:
+    # Bonus points for starting a glide from a high altitude
+    points: 8
+    ELYTRA_FLY:
+      conditions:
+        - '%player y% > 150 : %allow%'
+  5:
+    # Basic points for starting an elytra glide
+    points: 5
+    ELYTRA_FLY:
+      conditions: []

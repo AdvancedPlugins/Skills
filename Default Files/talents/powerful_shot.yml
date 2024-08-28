@@ -1,0 +1,16 @@
+# Powerful Shot talent
+name: "Powerful Shot"
+description: "Chance to increase damage of crossbow shots by 25%, cooldown 10s"
+icon:
+  type: CROSSBOW
+
+mana: 5
+
+abilities:
+  SHOOT:
+    cooldown: 10
+    conditions:
+      - '%item type% contains CROSSBOW : %allow%'
+    effects:
+      - INCREASE_DAMAGE:25
+      - PARTICLE:CRIT:10:0.3

@@ -1,0 +1,15 @@
+# Shield Master talent
+name: "Shield Master"
+description: "Negate all damage when blocking with a shield, cooldown 10s"
+icon:
+  type: SHIELD
+
+mana: 8
+
+abilities:
+  SHIELD_BLOCK:
+    cooldown: 10
+    effects:
+      - CANCEL_EVENT
+      - PARTICLE:CRIT:15:0.5
+      - PLAY_SOUND:ITEM_SHIELD_BLOCK:1:1

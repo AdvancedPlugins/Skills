@@ -1,0 +1,15 @@
+name: "Digger"
+description: "Break blocks in a 3x3 area"
+icon:
+  type: NETHERITE_PICKAXE
+
+mana: 4
+
+abilities:
+  MINING:
+    conditions:
+      - '%item type% contains _PICKAXE : %allow%'
+    effects:
+      - BREAK_BLOCK @Trench{r=3}
+      - PARTICLE:BLOCK_CRACK:30:1
+      - PLAY_SOUND:BLOCK_GRAVEL_BREAK:1:1

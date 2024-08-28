@@ -1,0 +1,18 @@
+# Impaler talent
+name: "Impaler"
+description: "Chance to deal extreme damage with melee trident hit"
+icon:
+  type: PRISMARINE_SHARD
+
+mana: 4
+
+abilities:
+  ATTACK:
+    cooldown: 30 # seconds
+    chance: 25
+    conditions:
+      - '%attacker item type% contains TRIDENT : %allow%'
+    effects:
+      - INCREASE_DAMAGE:100
+      - PARTICLE:CRIT:20:0.5
+      - PLAY_SOUND:ENTITY_PLAYER_ATTACK_CRIT:1:1

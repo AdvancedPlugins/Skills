@@ -1,0 +1,41 @@
+prefix: "&5AdvancedSkills"
+
+messages:
+  skills:
+    learning-new:
+      - "&aYou are learning a new skill..."
+    gained-points:
+      - "&aYou gained &6%points% &apoints in &6%skill%&a! Next level in &6%remaining%&a points!"
+      - "[BOSS_BAR:%boss-bar-progress%:GREEN:NOTCHED_20:35]&aYou gained &6%points% &apoints in &6%skill%&a! Next level in &6%remaining%&a points!"
+    level-up:
+      - "&aYou leveled up in &6%skill%&a! You are now level &6%level%&a!"
+      - "[BOSS_BAR:1.0:GREEN:PROGRESS:35]&aYou leveled up in &6%skill%&a! You are now level &6%level%&a!"
+  classes:
+    select:
+      - "&aYou have selected the &6%class%&a class!"
+      - "[TITLE]&aSelected &6%class%&a class!"
+      - "[CLOSE_MENU]"
+    cannot-change:
+      - "&cYou cannot change your class!"
+    cooldown:
+      - "&cYou must wait &6%time% &cbefore changing your class again!"
+    reminder:
+      - "&aYou have not selected a class yet! Use &6/classes &ato select one!"
+  talents:
+    locked:
+      - '&cThis talent is yet to be unlocked by you!'
+    max-active:
+      - '&cYou can only have &6%max% &ctalents active at once!'
+    deactivated:
+      - '&aYou have deactivated the &6%talent% &atalent!'
+    activated:
+      - '&aYou have activated the &6%talent% &atalent!'
+  mana:
+    gained:
+      - "[ACTION_BAR]&e+%amount%✨ &6Mana &7(%total%✨)"
+    used:
+      - "[ACTION_BAR]&c-%amount%✨ &6Mana &7(%total%✨)"
+    command:
+      - "&fYour Mana: &6%mana%✨"
+    cap:
+      - "&cYou have reached the maximum mana cap of %mana-cap%!"

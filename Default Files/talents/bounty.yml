@@ -1,0 +1,18 @@
+# Bounty talent
+name: "Bounty"
+description: "Chance to find rare items while harvesting"
+icon:
+  type: DIAMOND
+
+mana: 2
+
+abilities:
+  MINING:
+    cooldown: 10 # seconds
+    chance: 20
+    conditions:
+      - '%block type% contains WHEAT|CARROTS|POTATOES|BEETROOTS|MELON|PUMPKIN|SUGAR_CANE|CACTUS : %allow%'
+    effects:
+      - GIVE_ITEM:<random word>DIAMOND,EMERALD,GOLD_INGOT,IRON_INGOT,LAPIS_LAZULI,REDSTONE</random word> @Block
+      - PARTICLE:TOTEM:10:0.5
+      - PLAY_SOUND:ENTITY_EXPERIENCE_ORB_PICKUP:1:1

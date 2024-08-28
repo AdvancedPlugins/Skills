@@ -1,0 +1,63 @@
+name: Defense
+description: "Master of protection and damage mitigation"
+# Icon shown in menu
+icon:
+  type: SHIELD
+# Point leveling curve
+point-levels: "120 * (%level% * 1.3)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - iron_skin:3 #Chance to reduce incoming damage
+  - shield_master:2 #Negate all damage when blocking with a shield
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 8 + (%level% * 0.05)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for being hit by a player
+    points: 4
+    DEFENSE:
+      conditions:
+        - '%victim is player% = true : %allow%'
+  2:
+    # Points for being hit by a mob
+    points: 3
+    DEFENSE_MOB:
+      conditions:
+        - '%victim is player% = true : %allow%'
+  3:
+    # Points for being hit by a mob projectile
+    points: 5
+    DEFENSE_MOB_PROJECTILE:
+      conditions:
+        - '%victim is player% = true : %allow%'
+  4:
+    # Points for being hit by a player projectile
+    points: 6
+    DEFENSE_PROJECTILE:
+      conditions:
+        - '%victim is player% = true : %allow%'
+  5:
+    # Points for blocking with a shield
+    points: 8
+    SHIELD_BLOCK:
+      conditions:
+        - '%victim is player% = true : %allow%'
+  6:
+    # Bonus points for blocking strong attacks with a shield
+    points: 12
+    SHIELD_BLOCK:
+      conditions:
+        - '%victim is player% = true : %allow%'
+        - '%damage% > 7 : %allow%'

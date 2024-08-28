@@ -1,0 +1,61 @@
+name: Woodcutting
+description: "Master of forestry and lumber harvesting"
+# Icon shown in menu
+icon:
+  type: OAK_LOG
+# Point leveling curve
+point-levels: "100 * (%level% * 1.3)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - timber:1 #Chance to fell a tree with one hit
+  - lumberjack:3 #Chance to get more drops from trees
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 9 + (%level% * 0.05)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for chopping common wood types
+    points: 5
+    MINING:
+      conditions:
+        - '%item type% contains AXE : %allow%'
+        - '%block type% contains OAK_LOG|BIRCH_LOG|SPRUCE_LOG : %allow%'
+  2:
+    # Points for chopping rarer wood types
+    points: 7
+    MINING:
+      conditions:
+        - '%item type% contains AXE : %allow%'
+        - '%block type% contains JUNGLE_LOG|ACACIA_LOG|DARK_OAK_LOG : %allow%'
+  3:
+    # Points for chopping nether wood types
+    points: 10
+    MINING:
+      conditions:
+        - '%item type% contains AXE : %allow%'
+        - '%block type% contains CRIMSON_STEM|WARPED_STEM : %allow%'
+  4:
+    # Points for stripping logs
+    points: 3
+    MINING:
+      conditions:
+        - '%item type% contains AXE : %allow%'
+        - '%block type% contains STRIPPED_OAK_LOG|STRIPPED_BIRCH_LOG|STRIPPED_SPRUCE_LOG|STRIPPED_JUNGLE_LOG|STRIPPED_ACACIA_LOG|STRIPPED_DARK_OAK_LOG|STRIPPED_CRIMSON_STEM|STRIPPED_WARPED_STEM : %allow%'
+  5:
+    # Points for chopping wood (planks form)
+    points: 1
+    MINING:
+      conditions:
+        - '%item type% contains AXE : %allow%'
+        - '%block type% contains OAK_WOOD|BIRCH_WOOD|SPRUCE_WOOD|JUNGLE_WOOD|ACACIA_WOOD|DARK_OAK_WOOD|CRIMSON_HYPHAE|WARPED_HYPHAE : %allow%'

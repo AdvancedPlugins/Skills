@@ -1,0 +1,43 @@
+# Skill progress menu
+name: "&aSkill Progress"
+size: 36
+
+items:
+  filler:
+    type: GRAY_STAINED_GLASS_PANE
+    name: ' '
+  27:
+    type: CALIBRATED_SCULK_SENSOR
+    name: '&dSkills Menu'
+    action: OPEN_SKILLS_MENU
+  '30':
+    name: '&cPrevious Page'
+    action: PREVIOUS_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0=
+  '32':
+    name: '&cNext Page'
+    action: NEXT_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzMzYWU4ZGU3ZWQwNzllMzhkMmM4MmRkNDJiNzRjZmNiZDk0YjM0ODAzNDhkYmI1ZWNkOTNkYThiODEwMTVlMyJ9fX0=
+  '35':
+    type: BARRIER
+    name: '&cClose the menu'
+    action: CLOSE
+
+settings:
+  progressSlots: "0,9,18,19,20,11,2,3,4,13,22,23,24,15,6,7,8,17,26"
+  progressItemUnlocked:
+    type: LIME_STAINED_GLASS_PANE
+    id: 5
+    name: "&a&l%skill%&f&l Progression&f (Level %level%)"
+    lore:
+      - '&7Level is &aunlocked'
+      - ''
+      - ' &7- &6Skill Talents: &e%talents%'
+  progressItemLocked:
+    type: STAINED_GLASS_PANE
+    name: "&a%skill%&f&l Progression&f (Level %level%)"
+    lore:
+      - '&7Level is &clocked'
+      - ''
+      - ' &7- &3Points: &b%points%&7/&b%points_level%'
+      - ' &7- &6Skill Talents: &e%talents%'

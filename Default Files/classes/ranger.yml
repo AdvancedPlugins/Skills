@@ -1,0 +1,9 @@
+name: "Ranger"
+description: "A skilled archer and nature expert."
+icon:
+  type: BOW
+skills:
+  archery: 1.3
+  acrobatics: 1.1
+  herbalism: 1.2
+  woodcutting: 1.1

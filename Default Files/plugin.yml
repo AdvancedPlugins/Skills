@@ -1,0 +1,74 @@
+name: AdvancedSkills
+version: 1.0.0
+main: net.advancedplugins.skills.Core
+
+author: AdvancedPlugins
+description: Most advanced skills plugin for Minecraft.
+website: https://advancedplugins.net/item/AdvancedSkills.191
+
+permissions:
+  advancedskills.use:
+    description: Allows player to use skills
+    default: true
+  advancedskills.command.classes:
+    description: Allows player to use /class command
+    default: true
+  advancedskills.command.skills:
+    description: Allows player to use /skills command
+    default: true
+  advancedskills.command.talents:
+    description: Allows player to use /talents command
+    default: true
+  advancedskills.command.mana:
+    description: Allows player to use /mana command
+    default: true
+
+softdepend:
+  - AAC
+  - AAC5
+  - AdvancedHeads
+  - AuraSkills
+  - AutoPickup
+  - BanItem
+  - BlockLocker
+  - CMI
+  - CoreProtect
+  - DecentHolograms
+  - Factions
+  - FactionsOne
+  - FactionsUUID
+  - GadgetsMenu
+  - GriefPrevention
+  - ItemsAdder
+  - mcMMO
+  - MythicMobs
+  - NoCheatPlus
+  - PlaceholderAPI
+  - PlotSquared
+  - ProtocolLib
+  - ProtectionStones
+  - RestrictedCreative
+  - Towny
+  - LWC
+  - Lands
+  - RoseStacker
+  - Slimefun
+  - Spartan
+  - Vault
+  - Vulcan
+  - WildStacker
+  - WorldGuard
+  - WorldGuardExtraFlags
+  - SuperiorSkyblock2
+  - Oraxen
+  - BeaconPlus3
+  - LuckPerms
+  - Residence
+  - dynmap
+  - Geyser-Spigot
+  - Essentials
+  - AdvancedChests
+
+api-version: 1.17
+libraries:
+  - org.openjdk.nashorn:nashorn-core:15.3

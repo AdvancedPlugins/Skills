@@ -1,0 +1,10 @@
+# classes.yml
+enabled: true
+
+# Classes can be edited in `classes` folder!
+allow-class-change: true  # Whether players can change their class
+class-change-cooldown: 604800  # Cooldown in seconds for changing class, default 604800 = 7 days
+
+# Should players be reminded after login if they have not selected a class?
+# They will be sent a message few seconds after logging in
+remind-class-selection: true

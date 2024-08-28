@@ -1,0 +1,27 @@
+# Thunderbolt talent
+name: "Thunderbolt"
+description: "Chance to strike lightning when hitting with a thrown trident"
+icon:
+  type: TRIDENT
+
+mana: 1
+
+abilities:
+  SHOOT:
+    cooldown: 5 # seconds
+    chance: 20
+    conditions:
+      - '%item type% contains TRIDENT : %allow%'
+    effects:
+      - LIGHTNING:true
+      - PARTICLE:FLASH:10:0.5
+      - PLAY_SOUND:ENTITY_LIGHTNING_BOLT_THUNDER:1:1
+  SHOOT_MOB:
+    cooldown: 5 # seconds
+    chance: 20
+    conditions:
+      - '%item type% contains TRIDENT : %allow%'
+    effects:
+      - LIGHTNING:true
+      - PARTICLE:FLASH:10:0.5
+      - PLAY_SOUND:ENTITY_LIGHTNING_BOLT_THUNDER:1:1

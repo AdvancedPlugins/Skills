@@ -1,0 +1,9 @@
+name: "Explorer"
+description: "A versatile adventurer, specialized in discovery."
+icon:
+  type: COMPASS
+skills:
+  acrobatics: 1.2
+  excavation: 1.2
+  fishing: 1.1
+  herbalism: 1.1

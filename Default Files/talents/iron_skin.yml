@@ -1,0 +1,15 @@
+# Iron Skin talent
+name: "Iron Skin"
+description: "Chance to reduce incoming damage by 25%"
+icon:
+  type: IRON_CHESTPLATE
+
+mana: 6
+
+abilities:
+  DEFENSE:
+    cooldown: 10 # seconds
+    chance: 25
+    effects:
+      - DECREASE_DAMAGE:25
+      - PARTICLE:BLOCK_CRACK:10:0.3

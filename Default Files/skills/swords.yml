@@ -1,0 +1,39 @@
+name: Swords
+description: "Mastery of Sword Combat"
+# Icon shown in menu
+icon:
+  type: DIAMOND_SWORD
+# Point leveling curve
+point-levels: "40 * (%level% * 1.35)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - head_hunter:2
+  - battle_fury:4
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 7 + (%level% * 0.1)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points given for this trigger
+    points: 1
+    KILL_MOB:
+      conditions:
+        - '%sword types% contains %item type% : %allow%'
+  2:
+    # Points given for this trigger
+    points: 1
+    KILL_PLAYER:
+      cooldown: 5 # Prevent abuse
+      conditions:
+        - '%sword types% contains %item type% : %allow%'

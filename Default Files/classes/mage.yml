@@ -1,0 +1,9 @@
+name: "Mage"
+description: "A wielder of arcane knowledge and mystical abilities."
+icon:
+  type: ENCHANTING_TABLE
+skills:
+  alchemy: 1.2
+  elytra: 1.1
+  acrobatics: 1.1
+  trident: 1.2

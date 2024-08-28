@@ -1,0 +1,20 @@
+# Mana configuration
+enabled: true
+
+# Should mana be given directly or drop on ground?
+# If set to true, it will drop, otherwise it will be given directly to the player
+drop: true
+
+dropped-item:
+  showName: true
+  glow: true
+
+# Maximum mana player is able to have
+mana-cap: 100
+
+# Set to 'none' to disable
+gain-mana-sound: BLOCK_SCULK_CHARGE
+
+item:
+  type: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+  name: "&e+%amount%✨ &6Mana"

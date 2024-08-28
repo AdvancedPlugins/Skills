@@ -1,0 +1,15 @@
+# Roll talent
+name: "Roll"
+description: "Chance to negate fall damage, cooldown 10s"
+icon:
+  type: FEATHER
+
+mana: 3
+
+abilities:
+  FALL_DAMAGE:
+    cooldown: 10
+    effects:
+      - CANCEL_EVENT
+      - PARTICLE:CLOUD:20:0.5
+      - PLAY_SOUND:ENTITY_PLAYER_SMALL_FALL:1:1

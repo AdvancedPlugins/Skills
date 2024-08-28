@@ -1,0 +1,27 @@
+# Executioner talent
+name: "Executioner"
+description: "Chance to instantly kill low-health enemies, cooldown 20s"
+icon:
+  type: WITHER_SKELETON_SKULL
+
+mana: 12
+
+abilities:
+  ATTACK:
+    cooldown: 20
+    conditions:
+      - '%attacker item type% contains _AXE : %allow%'
+      - '%victim health% <= 5 : %allow%'
+    effects:
+      - KILL
+      - PARTICLE:DAMAGE_INDICATOR:20:0.3
+      - PLAY_SOUND:ENTITY_WITHER_BREAK_BLOCK:1:0.8
+  ATTACK_MOB:
+    cooldown: 20
+    conditions:
+      - '%attacker item type% contains _AXE : %allow%'
+      - '%victim health% <= 5 : %allow%'
+    effects:
+      - KILL
+      - PARTICLE:DAMAGE_INDICATOR:20:0.3
+      - PLAY_SOUND:ENTITY_WITHER_BREAK_BLOCK:1:0.8

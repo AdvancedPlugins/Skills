@@ -1,0 +1,60 @@
+name: Fishing
+description: "Master of angling and aquatic harvesting"
+# Icon shown in menu
+icon:
+  type: FISHING_ROD
+# Point leveling curve (adjusted for whole number points)
+point-levels: "150 * (%level% * 1.2)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - abundance:1 #Chance to multiply fishing drops
+  - master_fisher:3 #Chance to catch fish faster
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 7 + (%level% * 0.05)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for a fish biting the hook
+    points: 1
+    BITE_HOOK:
+      conditions:
+        - '%item type% contains FISHING_ROD : %allow%'
+  2:
+    # Points for catching a common fish
+    points: 5
+    CATCH_FISH:
+      conditions:
+        - '%item type% contains FISHING_ROD : %allow%'
+        - '%caught% contains COD|SALMON : %allow%'
+  3:
+    # Bonus points for catching rare fish
+    points: 10
+    CATCH_FISH:
+      conditions:
+        - '%item type% contains FISHING_ROD : %allow%'
+        - '%caught% contains TROPICAL_FISH|PUFFERFISH : %allow%'
+  4:
+    # Points for catching treasure items
+    points: 15
+    CATCH_FISH:
+      conditions:
+        - '%item type% contains FISHING_ROD : %allow%'
+        - '%caught% contains BOW|ENCHANTED_BOOK|FISHING_ROD|NAME_TAG|NAUTILUS_SHELL|SADDLE : %allow%'
+  5:
+    # Points for catching junk items
+    points: 2
+    CATCH_FISH:
+      conditions:
+        - '%item type% contains FISHING_ROD : %allow%'
+        - '%caught% contains LILY_PAD|BOWL|LEATHER|LEATHER_BOOTS|ROTTEN_FLESH|STICK|STRING|POTION|BONE|INK_SAC|TRIPWIRE_HOOK : %allow%'

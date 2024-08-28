@@ -1,0 +1,16 @@
+# Timber talent
+name: "Timber"
+description: "Chance to fell entire tree at once"
+icon:
+  type: OAK_LOG
+mana: 7
+
+abilities:
+  MINING:
+    cooldown: 8
+    chance: 40
+    conditions:
+      - '%item type% contains AXE : %allow%'
+      - '%block type% contains LOG : %allow%'
+    effects:
+      - BREAK_TREE

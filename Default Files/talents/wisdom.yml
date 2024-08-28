@@ -1,0 +1,16 @@
+# Alchemist's Wisdom talent
+name: "Alchemist's Wisdom"
+description: "Chance to gain extra experience when brewing potions, cooldown 5s"
+icon:
+  type: EXPERIENCE_BOTTLE
+
+# Mana cost increases slightly with level
+mana: 2 + (%level% * 0.2)
+
+abilities:
+  BREW_POTION:
+    cooldown: 5
+    effects:
+      - EXP:5
+      - PARTICLE:SPELL_WITCH:10:0.5
+      - PLAY_SOUND:BLOCK_BREWING_STAND_BREW:1:1

@@ -1,0 +1,17 @@
+# Precise Shot talent
+name: "Piercing"
+description: "Chance for increased damage with bows, cooldown 8s"
+icon:
+  type: TARGET
+
+# Mana cost increases with level
+mana: 4
+
+abilities:
+  SHOOT:
+    conditions:
+      - '%item type% contains BOW : %allow%'
+    effects:
+      - INCREASE_DAMAGE:50
+      - PARTICLE:CRIT:15:0.3 @Victim
+      - PLAY_SOUND:ENTITY_ARROW_HIT_PLAYER:1:1.5 @Attacker

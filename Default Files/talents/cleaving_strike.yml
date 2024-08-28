@@ -1,0 +1,16 @@
+# Cleaving Strike talent
+name: "Cleaving Strike"
+description: "Chance to deal damage to nearby enemies on hit, cooldown 12s"
+icon:
+  type: IRON_AXE
+
+mana: 5
+
+abilities:
+  ATTACK:
+    conditions:
+      - '%attacker item type% contains _AXE : %allow%'
+    effects:
+      - DO_HARM:3 @Aoe{r=3,t=damageable}
+      - PARTICLE:SWEEP_ATTACK:30:0.5
+      - PLAY_SOUND:ENTITY_PLAYER_ATTACK_SWEEP:1:1

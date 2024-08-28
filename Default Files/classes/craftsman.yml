@@ -1,0 +1,8 @@
+name: "Craftsman"
+description: "A master of creation and resource gathering."
+icon:
+  type: CRAFTING_TABLE
+skills:
+  mining: 1.2
+  woodcutting: 1.2
+  alchemy: 1.1

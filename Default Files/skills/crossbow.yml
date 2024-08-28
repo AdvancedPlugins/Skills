@@ -1,0 +1,51 @@
+name: Crossbow
+description: "Master of crossbow combat"
+# Icon shown in menu
+icon:
+  type: CROSSBOW
+# Point leveling curve
+point-levels: "60 * (%level% * 1.35)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - powerful_shot:1
+  - precise_shot:5
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 5 + (%level% * 0.05)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    points: 1
+    SHOOT:
+      conditions:
+        - '%is headshot% = true : %allow%'
+        - '%attacker item type% = CROSSBOW : %allow%'
+  2:
+    # Bonus points for mob headshot
+    points: 1
+    SHOOT_MOB:
+      conditions:
+        - '%is headshot% = true : %allow%'
+        - '%attacker item type% = CROSSBOW : %allow%'
+  3:
+    # Points for killing a mob
+    points: 2
+    KILL_MOB:
+      conditions:
+        - '%attacker item type% = CROSSBOW : %allow%'
+  4:
+    # Points for killing a player
+    points: 3
+    KILL_PLAYER:
+      conditions:
+        - '%attacker item type% = CROSSBOW : %allow%'

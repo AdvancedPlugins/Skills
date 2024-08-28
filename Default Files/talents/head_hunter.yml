@@ -1,0 +1,18 @@
+# Head Hunter talent
+name: "Head Hunter"
+description: "Chance to multiply drops when killing mobs"
+icon:
+  type: DIAMOND_SWORD
+
+mana: 3
+
+abilities:
+  KILL_MOB:
+    cooldown: 10 # seconds
+    chance: 30
+    conditions:
+      - '%attacker item type% contains _SWORD : %allow%'
+    effects:
+      - MORE_DROPS:2
+      - PARTICLE:CRIT:15:0.5
+      - PLAY_SOUND:ENTITY_PLAYER_LEVELUP:1:1

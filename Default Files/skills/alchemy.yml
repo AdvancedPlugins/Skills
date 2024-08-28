@@ -1,0 +1,52 @@
+name: Alchemy
+description: "Master of potions and elixirs"
+icon:
+  type: BREWING_STAND
+point-levels: "90 * (%level% * 1.35)"
+max-level: 0
+talents:
+  - wisdom:1
+  - potent_brew:10
+mana:
+  drop: POINT
+  chance: 8 + (%level% * 0.05)
+  amount: 1
+point-triggers:
+  1:
+    # Points for brewing basic potions
+    points: 5
+    BREW_POTION:
+      conditions: []
+  2:
+    # Points for brewing extended potions
+    points: 8
+    BREW_POTION:
+      conditions:
+        - '%potion type% contains STRENGTH|SWIFTNESS|HEALING|REGENERATION|FIRE_RESISTANCE|NIGHT_VISION : %allow%'
+        - '%is extended% = true : %allow%'
+        - '%is upgraded% = true : %deny%'
+  3:
+    # Points for brewing upgraded potions
+    points: 10
+    BREW_POTION:
+      conditions:
+        - '%potion type% contains STRENGTH|SWIFTNESS|HEALING|REGENERATION : %allow%'
+        - '%is upgraded% = true : %allow%'
+  4:
+    # Points for brewing negative effect potions
+    points: 7
+    BREW_POTION:
+      conditions:
+        - '%potion type% contains POISON|WEAKNESS|SLOWNESS|HARMING : %allow%'
+  5:
+    # Points for brewing special potions
+    points: 12
+    BREW_POTION:
+      conditions:
+        - '%potion type% contains INVISIBILITY|WATER_BREATHING|LEAPING|SLOW_FALLING : %allow%'
+  6:
+    # Bonus points for brewing Turtle Master potion
+    points: 15
+    BREW_POTION:
+      conditions:
+        - '%potion type% contains TURTLE_MASTER : %allow%'

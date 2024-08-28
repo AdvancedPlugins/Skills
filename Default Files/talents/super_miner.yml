@@ -1,0 +1,19 @@
+# Super Mining talent
+name: "Super Mining"
+description: "Chance to gain Haste"
+icon:
+  type: GOLDEN_PICKAXE
+
+mana: 3
+
+abilities:
+  MINING:
+    cooldown: 30 # seconds
+    chance: 25
+    conditions:
+      - '%block type% contains _ORE : %allow%'
+    effects:
+      - POTION:FAST_DIGGING:7:100
+      - MORE_DROPS:2
+      - PARTICLE:FLAME:20:0.5
+      - PLAY_SOUND:BLOCK_FIRE_EXTINGUISH:1:1

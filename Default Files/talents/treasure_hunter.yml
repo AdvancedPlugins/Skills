@@ -1,0 +1,19 @@
+# Treasure Hunter talent
+name: "Treasure Hunter"
+description: "Chance to find rare items while digging"
+icon:
+  type: GOLD_NUGGET
+
+mana: 6
+
+abilities:
+  MINING:
+    cooldown: 30
+    chance: 15
+    conditions:
+      - '%item type% contains _SHOVEL : %allow%'
+      - '%block type% contains DIRT|SAND|GRAVEL|CLAY : %allow%'
+    effects:
+      - DROP_ITEM:IRON_NUGGET:3
+      - PARTICLE:COMPOSTER:10:0.5
+      - PLAY_SOUND:ENTITY_EXPERIENCE_ORB_PICKUP:1:1

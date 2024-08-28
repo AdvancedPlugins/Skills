@@ -1,0 +1,17 @@
+# Precision Shot talent
+name: "Precise Shot"
+description: "Chance to double damage on headshots, cooldown 15s"
+icon:
+  type: TARGET
+
+mana: 7
+
+abilities:
+  SHOOT:
+    cooldown: 15
+    conditions:
+      - '%item type% contains CROSSBOW : %allow%'
+      - '%is headshot% : %allow%'
+    effects:
+      - DOUBLE_DAMAGE
+      - PARTICLE:DAMAGE_INDICATOR:10:0.3

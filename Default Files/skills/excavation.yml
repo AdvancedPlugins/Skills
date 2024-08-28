@@ -1,0 +1,40 @@
+name: Excavation
+description: "Master of digging and earth manipulation"
+# Icon shown in menu
+icon:
+  type: DIAMOND_SHOVEL
+# Point leveling curve
+point-levels: "55 * (%level% * 1.3)"
+# Max level, set to 0 for unlimited
+max-level: 0
+# Talents that are for this skill
+# Format: talent:level
+# Level means from which skill level this talent is unlocked
+talents:
+  - treasure_hunter:3 #Chance to find rare items while digging
+  - giga_breaker:1 #Chance to break blocks in a 3x3 area
+# Mana configuration
+mana:
+  # Should mana drop at each point gain or level up?
+  # POINT or LEVEL_UP
+  drop: POINT
+  # Chance of mana. Set to 0 to disable
+  chance: 8 + (%level% * 0.04)
+  # Amount of mana
+  amount: 1
+# Points are gained from triggers. Priority is from top to bottom.
+point-triggers:
+  1:
+    # Points for digging basic materials
+    points: 1
+    MINING:
+      conditions:
+        - '%item type% contains _SHOVEL : %allow%'
+        - '%block type% contains DIRT|SAND|GRAVEL|CLAY : %allow%'
+  2:
+    # Bonus points for digging rarer materials
+    points: 2
+    MINING:
+      conditions:
+        - '%item type% contains _SHOVEL : %allow%'
+        - '%block type% contains MYCELIUM|PODZO|RED_SAND|SOUL_SAND : %allow%'

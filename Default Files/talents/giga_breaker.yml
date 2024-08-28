@@ -1,0 +1,17 @@
+name: "Giga Breaker"
+description: "Chance to break blocks in a 3x3 area"
+icon:
+  type: DIAMOND_SHOVEL
+
+mana: 8
+
+abilities:
+  MINING:
+    cooldown: 25 # seconds
+    chance: 20
+    conditions:
+      - '%item type% contains _SHOVEL : %allow%'
+    effects:
+      - BREAK_BLOCK @Trench{r=3}
+      - PARTICLE:BLOCK_CRACK:30:1
+      - PLAY_SOUND:BLOCK_GRAVEL_BREAK:1:1

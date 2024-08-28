@@ -1,0 +1,8 @@
+name: "Warrior"
+description: "A skilled fighter, adept in various forms of combat."
+icon:
+  type: DIAMOND_SWORD
+skills:
+  swords: 1.2
+  axes: 1.2
+  archery: 1.2
