@@ -10,6 +10,6 @@ abilities:
   FALL_DAMAGE:
     cooldown: 15
     effects:
-      - DECREASE_DAMAGE:<random number>15-50</random>
+      - DECREASE_DAMAGE:<random number>15-50</random number>
       - PARTICLE:BLOCK_DUST:30:0.3
       - PLAY_SOUND:BLOCK_GRASS_STEP:1:0.8
