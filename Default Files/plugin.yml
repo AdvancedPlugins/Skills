@@ -1,5 +1,5 @@
 name: AdvancedSkills
-version: 1.0.0
+version: @version@
 main: net.advancedplugins.skills.Core
 
 author: AdvancedPlugins
@@ -68,6 +68,7 @@ softdepend:
   - Geyser-Spigot
   - Essentials
   - AdvancedChests
+  - AdvancedSeasons
 
 api-version: 1.17
 libraries:

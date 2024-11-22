@@ -6,6 +6,11 @@ items:
     type: GRAY_STAINED_GLASS_PANE
     name: ' '
 
+  25:
+    type: LIME_BANNER
+    name: '&bClick to open the party leaderboard'
+    action: OPEN_PARTY_LEADERBOARD_MENU
+
   26:
     type: BARRIER
     name: '&cClose Menu'
@@ -21,12 +26,8 @@ items:
     name: '&cLeave Party'
     action: PARTY_LEAVE
 
-  9-26:
-    type: BLACK_STAINED_GLASS_PANE
-    name: ' '
-
-  23:
-    type: PLAYER_HEAD
+  22:
+    type: EMERALD
     name: '&f&lParty Information'
     lore:
       - '&7Parties are used to chat and share'
@@ -34,19 +35,24 @@ items:
       - ''
       - ' &7- &bParty Members: &2%party_members%'
       - ' &7- &eMy Mana: &6%mana%✨'
-
 settings:
   partyMemberSlots: 10,11,12,13,14,15,16
-  skill:
-    name: "&b&l%skill% Skill"
+  feature: "&f- &d%name% &7| &fAt level &a%level%"
+  emptyMemberIcon:
+    type: PLAYER_HEAD
+    name: ""
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODAwM2MyMDdjNDAzYWYwNjkzYTllMjI2MWU2ODFkNTBlYzU3Y2Y4MmJlMmY1ZDM4NmIwYjlkMjcwN2Y3MTIwOSJ9fX0=
+  partyInfo:
+    type: CONDUIT
+    name: "&d&lParty Information"
     lore:
-      - '&7%description%'
-      - ''
-      - ' &7- &fCurrent Level: &f&l%level%'
-      - ' &7- &bPoints: &3%points%&7/&3%points_next_level%'
+      - '&7Your party is at level &6%level%'
+      - '&7of &5%max_level% &7levels!'
       - ' '
-      - ' &7- &aSkill Talents:'
-      - '%talents_new_line%' # To list talents in same line, use %talents% placeholder
-      - ''
-      - '&7 - &dMultiplier: &5x%multiplier% &7(%class%)'
-    action: OPEN_PROGRESS_MENU
+      - '&b&LUnlocked Features:'
+      - '%unlocked_features%'
+      - ' '
+      - '&3&lLocked Features'
+      - '%locked_features%'
+    slot: 4
+  partyMember: "&a%member%"

@@ -1,0 +1,10 @@
+# The skill level leaderboard
+skills:
+  # If set to false, the skill level leaderboard will not be available
+  enabled: true
+
+# If set to false, no leaderboard will be available
+enabled: true
+# When saving, the leaderboard will re-calculate itself as well. Do not set the interval too high.
+data-save-interval: 60 # seconds
+update-interval: 5 # seconds

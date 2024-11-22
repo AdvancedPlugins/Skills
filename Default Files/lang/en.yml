@@ -1,6 +1,14 @@
 prefix: "&5AdvancedSkills"
 
+party-chat: "Party chat"
+points-share: "Point sharing"
+
+menu:
+  not-in-a-party: "&cYou're not in a party."
+
 messages:
+  no-permission: "&cYou don't have permission!"
+  player-does-not-exists: "&cThat player doesn't exists"
   skills:
     learning-new:
       - "&aYou are learning a new skill..."
@@ -39,3 +47,45 @@ messages:
       - "&fYour Mana: &6%mana%✨"
     cap:
       - "&cYou have reached the maximum mana cap of %mana-cap%!"
+  party:
+    already-in-a-party: "&d[Party] &cYou're already in a party. You can leave from the party with &e/party leave&c."
+    already-in-the-party: "&d[Party] &cPlayer is already in the party."
+    create: "&d[Party] &bParty created successfully!"
+    not-in-a-party: "&d[Party] &cYou're not in a party."
+    leave: "&d[Party] &bYou left the party."
+    join: "&d[Party] &bYou joined to the &e%player%'s &bparty."
+    info:
+      - "&8&m=========[&aYour Party&8&m]========="
+      - "&dOwner&a: &b%owner%"
+      - "&dLevel&a: &b%level%"
+      - "&dPoints&a: &b%points%"
+      - "&dNext level&a: &b%next_level%"
+      - "&dPoints goal&a: &b%points_goal%"
+      - "&dMembers&a: "
+      - "%members%"
+      - "&8&m============[&a * &8&m]============="
+    not-owner: "&d[Party] &cYou're not the owner of the party!"
+    player-not-in-a-party: "&d[Party] &cThat player isn't in a party."
+    player-not-member: "&d[Party] &cThat player isn't member of the party."
+    invitation-sent: "&d[Party] &bPlayer &e%player% &breceived yor invitation."
+    waiting-for-confirmation: "&d[Party] &cPlayer has received your invitation, wait his confirmation."
+    player-invited-you: "&d[Party] &bPlayer &e%player% &binvited you to join his party. &bType &e/party accept &bto accept the invite."
+    player-already-invited: "&d[Party] &cThat player was invited by other party group. Try again later."
+    dont-have-invites: "&d[Party] &cYou don't have active invites."
+    invitation-warning: "&d[Party] &cWarning! &eIf you accept this invitation you will leave your current party."
+    joined-party: "&d[Party] &bYou joined to &e%player%'s &bparty."
+    player-joined-to-the-party: "[BOSS_BAR:1:PURPLE:PROGRESS:100] &e%player% &ajoined to the party! &dGive him the welcome!"
+    player-left-from-the-party: "[BOSS_BAR:1:PURPLE:PROGRESS:100] &e%player% &cleft from the party."
+    player-kicked-from-the-party: "[BOSS_BAR:1:PURPLE:PROGRESS:100] &e%player% was kicked from the party."
+    disband: "[TITLE] &cYour party was disbanded."
+    owner-change: "[BOSS_BAR:1:PURPLE:PROGRESS:100] &aNow &e%player% &ais the owner of the party."
+    level-up: "[BOSS_BAR:1:PURPLE:PROGRESS:100] &aParty reached the level &5%level%&a."
+    show-password: "&d[Party] &bYour password is: &e%password%"
+    copy-password: "Click here to copy your password"
+    password-needed: "&d[Party] &cYou need to introduce a password."
+    incorrect-password: "&d[Party] &cPassword is incorrect."
+    password: "&d[Party] &bPassword set successfully."
+    password-cleared: "&d[Party] &bPassword cleared successfully."
+    chat-enabled: "&d[&aParty Chat&d] &aEnabled"
+    chat-disabled: "&d[&aParty Chat&d] &cDisabled"
+    cannot-use-feature: "&d[Party] &cCannot use this feature, your party must be level %level% or higher to use this feature."

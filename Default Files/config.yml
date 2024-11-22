@@ -1,6 +1,6 @@
 # AdvancedSkills
-# Version: 1.0.7
-# Release date: 26/08/2024
+# Version: @version@
+# Release date: @date@
 
 lang: en
 
@@ -54,4 +54,7 @@ storage:
 auto-save:
   enabled: true
   interval: 15
-
+  
+# If set to false, the plugin will not generate the default plugin files when enabling the plugin
+# or reloading it.
+generate-default-files: true

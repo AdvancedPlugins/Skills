@@ -85,3 +85,75 @@ talents:
   aliases:
     - talent
     - advancedtalents
+party:
+  command: party
+  permission: advancedskills.command.party
+  description: "Party Command"
+  aliases: [ ]
+  subcommands:
+    create:
+      command: create
+      permission: advancedskills.command.createparty
+      description: "Create a party"
+      aliases: [ ]
+    leave:
+      command: leave
+      permission: advancedskills.command.leaveparty
+      description: "Leave from a party"
+      aliases: [ ]
+    info:
+      command: info
+      permission: advancedskills.command.info
+      description: "Show the info of a party"
+      aliases: [ ]
+    set-password:
+      command: set-password
+      permission: advancedskills.command.set-password
+      description: "Sets the password of a party"
+      aliases: [ ]
+    get-password:
+      command: get-password
+      permission: advancedskills.command.get-password
+      description: "Shows the password of a party"
+      aliases: [ ]
+    clear-password:
+      command: clear-password
+      permission: advancedskills.command.clear-password
+      description: "Clear the password of a party"
+      aliases: [ ]
+    kick:
+      command: kick
+      permission: advancedskills.command.kick
+      description: "Kicks a party member"
+      aliases: [ ]
+    set-owner:
+      command: set-owner
+      permission: advancedskills.command.set-owner
+      description: "Makes owner a party member"
+      aliases: [ ]
+    join:
+      command: join
+      permission: advancedskills.command.join
+      description: "Join to the party of a player"
+      aliases: [ ]
+    accept:
+      command: join
+      permission: advancedskills.command.join
+      description: "Accept an invite of a player"
+      aliases: [ ]
+    disband:
+      command: join
+      permission: advancedskills.command.disband
+      description: "Disband your party"
+      aliases: [ ]
+    invite:
+      command: join
+      permission: advancedskills.command.invite
+      description: "Invite a player to join your party"
+      aliases: [ ]
+party-chat:
+  command: party-chat
+  permission: advancedskills.command.party-chat
+  description: "Enable or disable the party chat"
+  aliases:
+    - pc

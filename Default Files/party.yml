@@ -27,3 +27,5 @@ levels:
   3: 800
   4: 1200
   5: 1400
+
+chat-format: "&d[&aParty Chat&d] &b%player%&7: %message%"

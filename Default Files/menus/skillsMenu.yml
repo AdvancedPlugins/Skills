@@ -52,4 +52,7 @@ settings:
       - '%talents_new_line%' # To list talents in same line, use %talents% placeholder
       - ''
       - '&7 - &dMultiplier: &5x%multiplier% &7(%class%)'
+      - ' '
+      - '&7&oLeft Click &7to see your Progress'
+      - '&7&oRight Click &7to see the Leaderboards'
     action: OPEN_PROGRESS_MENU
